@@ -34,6 +34,10 @@
   .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--muted);margin-right:6px}
   .dot.live{background:var(--ok)}
   .dot.off{background:var(--warn)}
+  .credit{margin:18px 0 0;text-align:center;font-size:12.5px;color:var(--muted)}
+  .credit strong{color:var(--text);font-weight:600}
+  .credit a{color:var(--accent);text-decoration:none}
+  .credit a:hover{text-decoration:underline}
   #toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;
        background:var(--panel);border:1px solid var(--line);padding:10px 16px;border-radius:999px;
        transition:.2s;pointer-events:none;font-size:13px}
@@ -61,6 +65,10 @@
       <span id="meta"></span>
     </div>
   </div>
+
+  <p class="credit">
+    Developed by <strong>Pasindu Shanuka</strong> · <a href="tel:+94714700007">071 4 700007</a>
+  </p>
 </div>
 <div id="toast"></div>
 
