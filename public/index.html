@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="si">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +43,7 @@
 <body>
 <div class="wrap">
   <h1>Live Clipboard</h1>
-  <p class="sub">එක channel එකක් තෝරලා type කරන්න — අනිත් පැත්තෙ live පෙන්නනවා, copy කරගන්නත් පුළුවන්.</p>
+  <p class="sub">Pick a channel and start typing — everyone on that channel sees it live and can copy it.</p>
 
   <div class="panel">
     <div class="row">
@@ -54,7 +54,7 @@
       <button id="clear">🗑 Clear</button>
     </div>
 
-    <textarea id="text" placeholder="මෙතන value එක enter කරන්න…" spellcheck="false"></textarea>
+    <textarea id="text" placeholder="Enter your value here…" spellcheck="false"></textarea>
 
     <div class="bar">
       <span><span id="dot" class="dot"></span><span id="status">connecting…</span></span>
@@ -164,7 +164,7 @@ $('paste').addEventListener('click', async () => {
     const t = await navigator.clipboard.readText();
     ta.value = t; lastTyped = Date.now(); pending = true; await push();
     toast('Pasted & synced ✔');
-  } catch (e) { toast('Clipboard read blocked — Ctrl+V දාන්න'); ta.focus(); }
+  } catch (e) { toast('Clipboard read blocked — use Ctrl+V instead'); ta.focus(); }
 });
 
 $('clear').addEventListener('click', () => { ta.value=''; pending=true; push(); toast('Cleared'); });
