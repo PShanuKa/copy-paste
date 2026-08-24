@@ -1,0 +1,13 @@
+services:
+  clipboard:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      SERVERS: server-1,server-2,server-3,server-4,server-5
+    volumes:
+      - clip-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  clip-data:
